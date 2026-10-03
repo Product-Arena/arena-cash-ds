@@ -1,0 +1,60 @@
+/*
+ * Arena Cash tokens.
+ * Simplified from the AI Product Sense case kit (v3, April 2026).
+ * Components must use these variables. Do not hardcode hex in components.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --ac-red: #ff494c;
+  --ac-red-hover: #e63b3e;
+  --ac-red-press: #c8282b;
+  --ac-red-tint: #ffe4e4;
+  --ac-black: #0a0a0a;
+  --ac-white: #ffffff;
+
+  --ac-gray-900: #141414;
+  --ac-gray-700: #333333;
+  --ac-gray-500: #7a7a7a;
+  --ac-gray-300: #d1d1d1;
+  --ac-gray-100: #f2f2f2;
+  --ac-gray-50: #f9f9f9;
+
+  --ac-success: #1fa05b;
+  --ac-success-bg: #e8f6ee;
+  --ac-warning: #e08a1e;
+  --ac-warning-bg: #fdf3e4;
+  --ac-danger: #d93434;
+  --ac-danger-bg: #fdecec;
+  --ac-info: #2870e0;
+  --ac-info-bg: #e8f0fc;
+
+  --ac-bg: var(--ac-white);
+  --ac-bg-muted: var(--ac-gray-50);
+  --ac-fg: var(--ac-gray-900);
+  --ac-fg-muted: var(--ac-gray-700);
+  --ac-fg-subtle: var(--ac-gray-500);
+  --ac-border: var(--ac-gray-300);
+
+  --ac-font-display: "Archivo", "Helvetica Neue", system-ui, sans-serif;
+  --ac-font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --ac-text-xs: 12px;
+  --ac-text-sm: 14px;
+  --ac-text-md: 16px;
+  --ac-text-button: 15px;
+
+  --ac-space-2: 8px;
+  --ac-space-3: 12px;
+  --ac-space-4: 16px;
+  --ac-space-6: 24px;
+  --ac-space-8: 32px;
+
+  --ac-radius-md: 10px;
+  --ac-radius-lg: 16px;
+
+  --ac-shadow-cta: 0 8px 24px rgba(255, 73, 76, 0.25);
+  --ac-ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ac-dur: 160ms;
+}

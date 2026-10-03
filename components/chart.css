@@ -1,0 +1,91 @@
+.ac-chart {
+  background: var(--ac-bg);
+  border: 1px solid var(--ac-border);
+  border-radius: var(--ac-radius-lg);
+  padding: var(--ac-space-4);
+  font-family: var(--ac-font-sans);
+  color: var(--ac-fg);
+}
+
+.ac-chart__title {
+  margin: 0 0 var(--ac-space-4);
+  font-family: var(--ac-font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ac-chart__plot {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--ac-space-3);
+  height: 160px;
+}
+
+.ac-chart__col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  gap: var(--ac-space-2);
+}
+
+.ac-chart__bar {
+  display: block;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  background: var(--ac-red);
+}
+
+.ac-chart__bar--compare {
+  background: var(--ac-gray-300);
+}
+
+.ac-chart__label {
+  font-size: var(--ac-text-xs);
+  color: var(--ac-fg-subtle);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.ac-chart__line {
+  width: 100%;
+  height: 180px;
+  display: block;
+}
+
+.ac-chart__series {
+  fill: none;
+  stroke: var(--ac-red);
+  stroke-width: 2;
+}
+
+.ac-chart__series--compare {
+  stroke: var(--ac-gray-500);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+.ac-chart__area {
+  fill: var(--ac-red);
+  opacity: 0.1;
+}
+
+.ac-chart__axis {
+  stroke: var(--ac-gray-300);
+  stroke-width: 1;
+}
+
+.ac-chart__value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+.ac-chart__value--up {
+  color: var(--ac-success);
+}
+
+.ac-chart__value--down {
+  color: var(--ac-danger);
+}

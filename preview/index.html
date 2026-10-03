@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arena Cash design system</title>
+    <link rel="stylesheet" href="../tokens/tokens.css" />
+    <link rel="stylesheet" href="../components/button.css" />
+    <link rel="stylesheet" href="../components/alert.css" />
+    <link rel="stylesheet" href="../components/chart.css" />
+    <style>
+      body {
+        margin: 0;
+        background: var(--ac-bg-muted);
+        color: var(--ac-fg);
+        font-family: var(--ac-font-sans);
+      }
+
+      main {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+
+      h1 {
+        margin: 16px 0 8px;
+        font-family: var(--ac-font-display);
+        font-size: 36px;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+      }
+
+      h2 {
+        margin: 40px 0 16px;
+        font-family: var(--ac-font-display);
+        font-size: 22px;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        margin: 0;
+        color: var(--ac-fg-muted);
+        line-height: 1.5;
+      }
+
+      .logo-row {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .logo-plate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 280px;
+        height: 120px;
+        border-radius: var(--ac-radius-lg);
+        border: 1px solid var(--ac-border);
+      }
+
+      .logo-plate img {
+        width: 200px;
+        height: auto;
+      }
+
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+      }
+
+      .swatch {
+        background: var(--ac-white);
+        border: 1px solid var(--ac-border);
+        border-radius: var(--ac-radius-md);
+        overflow: hidden;
+      }
+
+      .swatch__chip {
+        height: 56px;
+      }
+
+      .swatch p {
+        padding: 8px 10px 10px;
+        font-size: 12px;
+        color: var(--ac-fg);
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .stack {
+        display: grid;
+        gap: 12px;
+      }
+
+      .chart-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="logo-plate">
+        <img src="../assets/logo/arena-cash.png" alt="Arena Cash" />
+      </div>
+      <h1>Arena Cash</h1>
+      <p>Logo, cores, botões, alertas e gráficos. Versão curta para o case.</p>
+
+      <h2>Cores</h2>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--ac-red)"></div>
+          <p>Red<br />#FF494C</p>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--ac-black)"></div>
+          <p>Black<br />#0A0A0A</p>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--ac-gray-900)"></div>
+          <p>Text<br />#141414</p>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--ac-gray-500)"></div>
+          <p>Muted<br />#7A7A7A</p>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--ac-success)"></div>
+          <p>Success<br />#1FA05B</p>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--ac-danger)"></div>
+          <p>Danger<br />#D93434</p>
+        </div>
+      </div>
+
+      <h2>Botões</h2>
+      <div class="row">
+        <button class="ac-button ac-button--primary" type="button">Ativar cartão</button>
+        <button class="ac-button ac-button--secondary" type="button">Ver extrato</button>
+        <button class="ac-button ac-button--ghost" type="button">Agora não</button>
+        <button class="ac-button ac-button--primary" type="button" disabled>Indisponível</button>
+      </div>
+
+      <h2>Alertas</h2>
+      <div class="stack">
+        <div class="ac-alert ac-alert--success" role="status">
+          <div>
+            <span class="ac-alert__title">Cartão ativado</span>
+            A primeira compra em 30 dias conta como ativação.
+          </div>
+        </div>
+        <div class="ac-alert ac-alert--warning" role="status">
+          <div>
+            <span class="ac-alert__title">Uso ainda baixo</span>
+            O cartão não é o principal nas primeiras semanas.
+          </div>
+        </div>
+        <div class="ac-alert ac-alert--danger" role="alert">
+          <div>
+            <span class="ac-alert__title">Pagamento recusado</span>
+            Confira o limite antes de tentar de novo.
+          </div>
+        </div>
+        <div class="ac-alert ac-alert--info" role="status">
+          <div>
+            <span class="ac-alert__title">Interchange por ativo</span>
+            A receita por cliente ativo caiu mesmo com mais volume.
+          </div>
+        </div>
+      </div>
+
+      <h2>Gráficos</h2>
+      <div class="stack">
+        <section class="ac-chart">
+          <div class="chart-head">
+            <h3 class="ac-chart__title">Ativação do cartão</h3>
+            <span class="ac-chart__value ac-chart__value--down">24%</span>
+          </div>
+          <div class="ac-chart__plot" aria-hidden="true">
+            <div class="ac-chart__col">
+              <span class="ac-chart__bar" style="height: 100%"></span>
+              <span class="ac-chart__label">S1</span>
+            </div>
+            <div class="ac-chart__col">
+              <span class="ac-chart__bar" style="height: 95%"></span>
+              <span class="ac-chart__label">S4</span>
+            </div>
+            <div class="ac-chart__col">
+              <span class="ac-chart__bar" style="height: 82%"></span>
+              <span class="ac-chart__label">S8</span>
+            </div>
+            <div class="ac-chart__col">
+              <span class="ac-chart__bar" style="height: 63%"></span>
+              <span class="ac-chart__label">S12</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="ac-chart">
+          <div class="chart-head">
+            <h3 class="ac-chart__title">Gasto no cartão vs mês anterior</h3>
+            <span class="ac-chart__value ac-chart__value--up">+R$ 180</span>
+          </div>
+          <svg class="ac-chart__line" viewBox="0 0 320 140" role="img" aria-label="Gasto sobe ao longo de quatro semanas. A linha tracejada é o mês anterior.">
+            <line class="ac-chart__axis" x1="16" y1="120" x2="304" y2="120" />
+            <path class="ac-chart__area" d="M16 96 L112 88 L208 70 L304 40 L304 120 L16 120 Z" />
+            <path class="ac-chart__series--compare" d="M16 100 L112 96 L208 92 L304 86" />
+            <path class="ac-chart__series" d="M16 96 L112 88 L208 70 L304 40" />
+          </svg>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
