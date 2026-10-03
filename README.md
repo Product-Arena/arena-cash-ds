@@ -2,7 +2,7 @@
 
 Small design system for the Arena Cash case: logo, colors, buttons, alerts, and a chart pattern.
 
-It is a short version of the shape used by the LAT design system (tokens, a few components, one preview). It is not an npm package.
+It covers tokens, a few components, and one preview. It is not an npm package.
 
 ## Logo
 
